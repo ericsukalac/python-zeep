@@ -46,7 +46,7 @@ class SoapMessage(ConcreteMessage):
 
     def serialize(self, *args, **kwargs):
         """Create a SerializedMessage for this message"""
-        if 'soap' not in self.swdl.types._prefix_map_custom:
+        if 'soap' not in self.wsdl.types._prefix_map_custom:
             nsmap = {"soap-env": self.nsmap["soap-env"]}
         else:
             nsmap = {}
